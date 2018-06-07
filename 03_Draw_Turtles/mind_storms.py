@@ -1,23 +1,25 @@
 import turtle
 
 def draw_square():
-    window = turtle.Screen()
-    window.bgcolor("red")
-
     t = turtle.Turtle(shape="turtle")
     t.color("yellow")
-    t.forward(200)
-    t.right(90)
-    t.forward(200)
-    t.right(90)
-    t.forward(200)
-    t.right(90)
-    t.forward(200)
+    for i in range(4):
+        t.forward(200)
+        t.right(90)
 
+def draw_circle():
     t = turtle.Turtle()
     t.color("blue")
     t.circle(100)
-    window.exitonclick()
 
-draw_square()
+def picasso():
+    draw_board = turtle.Screen()
+    draw_board.bgcolor("red")
+
+    draw_square()
+    draw_circle()
+
+    draw_board.exitonclick()
+
+picasso()
 
