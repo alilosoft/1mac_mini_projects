@@ -4,7 +4,7 @@ import os
 def rename_files():
     working_dir = os.getcwd()
     print "Current Working Directory: " + working_dir
-    secret_msg_dir = working_dir + "/message"
+    secret_msg_dir = working_dir + "/secret"
     # list file_list in dir
     file_list = os.listdir(secret_msg_dir)
     # rename each file
