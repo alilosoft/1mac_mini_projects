@@ -12,9 +12,6 @@ def draw_square(a_turtle):
         a_turtle.right(90)
 
 def circle_of_squares():
-    draw_board = turtle.Screen()
-    draw_board.bgcolor("black")
-
     t = turtle.Turtle(shape="turtle")
     t.color("green yellow")
     t.pensize(2)
@@ -24,6 +21,10 @@ def circle_of_squares():
         draw_square(t)
         t.right(10)
 
+def picasso():
+    draw_board = turtle.Screen()
+    draw_board.bgcolor("black")
+    circle_of_squares()
     draw_board.exitonclick()
 
-circle_of_squares()
+picasso()
