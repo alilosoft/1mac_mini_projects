@@ -12,6 +12,12 @@ def check_profanity(text):
     connection = urllib.urlopen("http://www.wdylike.appspot.com/?q=" + text)
     response = connection.read()
     connection.close()
+    if "true" in response:
+        print "Watch your language"
+    elif "false" in response:
+        print "Clean speech"
+    else:
+        print "Unknown response from the server"
     return response
 
 
