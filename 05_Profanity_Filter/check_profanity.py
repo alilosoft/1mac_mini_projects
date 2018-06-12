@@ -13,12 +13,11 @@ def check_profanity(text):
     response = connection.read()
     connection.close()
     if "true" in response:
-        print "Watch your language"
+        return "Watch your language"
     elif "false" in response:
-        print "Clean speech"
+        return "Clean speech"
     else:
-        print "Unknown response from the server"
-    return response
+        return "Unknown response from the server"
 
 
-print check_profanity(read_txt("story.txt"))
+print check_profanity(read_txt("email.txt"))
